@@ -1,7 +1,7 @@
 # [NOMBRE DEL PROYECTO] - API de integración de datos
 ## EAE253B - Economía y Ciencia de Datos
 
-> **Autores:** [Nombre Estudiante 1] - [email] | [Nombre Estudiante 2] - [email]  
+> **Autores:** [Nicolás Bianchi] - [Nico.bianchi@uc.cl] | [Nombre Estudiante 2] - [email]  
 > **Profesor:** Carlos Alvarado  
 > **Semestre:** 2do semestre 2025  
 > **Fecha:** [Fecha de entrega final]
