@@ -7,6 +7,22 @@
 > **Fecha:** [29/08/25]
 
 ---
+## **Propuesta detallada del proyecto**
+
+Nuestro proyecto consiste en crear una API llamada “Economía del Ironman”, cuyo objetivo es mostrar y analizar los costos de prepararse y competir en el Ironman 70.3 de Valdivia 2025. La idea es juntar información personal (perfil, horario académico, equipamiento y gastos) con datos económicos reales para entender cómo la inflación y el dólar afectan el presupuesto de un deportista.
+
+Lo que buscamos es responder preguntas concretas, como:
+¿Cuánto cuesta entrenar y competir considerando la inflación y el tipo de cambio?
+¿Cómo se ajusta el presupuesto mensual cuando los precios suben?
+¿Qué impacto tiene el dólar en el costo de zapatillas, bicicletas y accesorios importados?
+¿Cómo combinar el horario de clases con los entrenamientos para organizar mejor el tiempo?
+
+## **Datos económicos a analizar**
+
+1) Inflación (IPC mensual del Banco Central de Chile): Para calcular cómo cambian los precios de un año a otro y ajustar los presupuestos a valores actuales.
+2) Tipo de cambio USD/CLP: Fundamental porque gran parte del equipamiento deportivo se compra en dólares, y su precio depende directamente del valor del dólar.
+3) Presupuesto mensual: Registro de los principales gastos del deportista (nutrición, inscripciones, viajes, gimnasio, equipamiento).
+4) Costo total del Ironman 70.3 Valdivia: Incluye inscripción, transporte, alojamiento, alimentación y amortización del equipo usado.
 
 ## 📋 **Descripción del Endpoints**
 
@@ -26,7 +42,6 @@ Justificación: Saber en qué momentos del día existen clases y en cuáles no e
 
 Propósito: Este endpoint lista el equipamiento deportivo del atleta (running, ciclismo, natación), con marca, modelo y vida útil estimada en kilómetros.
 Justificación: El equipamiento es uno de los mayores gastos en el triatlón. Contar con esta información permite proyectar costos futuros (reemplazo de zapatillas, cadenas, ruedas, etc.) y calcular métricas como el costo por kilómetro entrenado, integrando economía con deporte de forma directa.
-
 
 2. **Endpoints de Integración:**
 
@@ -58,6 +73,15 @@ Justificación: En un contexto de inflación, un monto fijo pierde poder adquisi
 
 Propósito: Este endpoint calcula el costo total de competir en un Ironman 70.3, considerando inscripción, viaje, alojamiento, nutrición y la amortización del equipamiento utilizado. La salida incluye el desglose detallado y el valor en CLP y USD.
 Justificación: Competir en un Ironman es una inversión significativa. Este endpoint entrega una visión integral del gasto asociado, lo que permite tomar decisiones financieras informadas (buscar auspicios, ajustar el presupuesto, priorizar compras de equipo). Además, conecta los datos personales y externos (IPC, USD/CLP) para proyectar un costo realista de la temporada.
+
+
+## **Identificación de fuentes de datos y APIs externas a utilizar**
+
+1) Banco Central de Chile (API BDE): Proveerá los datos de IPC mensual y del tipo de cambio USD/CLP. Son indicadores clave para ajustar presupuestos por inflación y para calcular el impacto de la variación del dólar en la compra de equipamiento importado.
+
+2) Mercado Libre (API pública de búsqueda de productos): Permitirá consultar precios de zapatillas, bicicletas y accesorios deportivos. Estos valores servirán de referencia para estimar los costos de reposición de equipamiento.
+
+3) Strava API: Fuente de datos de entrenamiento (kilómetros, sesiones, volumen). Útil para relacionar el uso real del equipamiento con su vida útil y calcular el costo por kilómetro entrenado.
 
 
 ## 🔗 **Detalle de Endpoints Disponibles**
